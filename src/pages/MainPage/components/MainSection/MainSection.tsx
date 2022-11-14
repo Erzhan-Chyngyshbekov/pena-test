@@ -1,6 +1,6 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 
 import { CardButtonItem } from "../../../../components/CardButtonItem";
 import { CardCarouselItem } from "../../../../components/CardCarouselItem";
@@ -30,7 +30,7 @@ export const MainSection = () => {
           </Grid>
           <Grid item md={6} className={styles.empty} />
           <Grid item xs={6} md={3} sm={6}>
-            <CardButtonItem title="COMPANY VIDEO" icon={<PlayArrowIcon />} />
+            <CardButtonItem title="COMPANY VIDEO" icon={<PlayCircleIcon />} />
           </Grid>
           <Grid item md={3} className={styles.empty} />
         </Grid>
