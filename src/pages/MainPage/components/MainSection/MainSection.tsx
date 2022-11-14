@@ -2,13 +2,13 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 
+import { AppHeader } from "../../../../components/AppHeader";
 import { CardButtonItem } from "../../../../components/CardButtonItem";
 import { CardCarouselItem } from "../../../../components/CardCarouselItem";
 import { CardItem } from "../../../../components/CardItem";
 import { Container } from "../../../../components/Container";
 
 import styles from "./MainSection.module.scss";
-import { AppHeader } from "../../../../components/AppHeader";
 
 export const MainSection = () => {
   return (
