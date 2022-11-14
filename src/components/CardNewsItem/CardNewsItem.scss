@@ -1,0 +1,21 @@
+@import "../../styles/common/colors";
+
+.swiperr{
+    .swiper-pagination{
+        display: flex;
+        left: 30px;
+    }
+    .swiper-pagination-bullet {
+        width: 27px;
+        height: 5px;
+        border-radius: 0;
+    }
+    .swiper-pagination-bullet-active {
+        background: white;
+    }
+}
+
+.wrapper{
+    padding: 30px;
+    // background: $PRIMARY_BLUE;
+}

@@ -1,0 +1,47 @@
+@import "../../styles/common/colors";
+$AVATAR_SIZE: 60px;
+
+.swiper{
+    .swiper-pagination-bullet {
+        width: 27px;
+        height: 5px;
+        border-radius: 0;
+    }
+    .swiper-pagination-bullet-active {
+        background: $PRIMARY_GRAY_4;
+    }
+}
+
+.wrapper{
+    height: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    &--yellow{
+        background: #FCF3D3;
+    }
+    .avatar{
+        width: $AVATAR_SIZE;
+        height: $AVATAR_SIZE;
+        background: $PRIMARY_GRAY;
+        color: $PRIMARY_GRAY_4;
+    }
+    .author{
+        margin-top: 15px;
+        font-weight: bold;
+    }
+    .rating{
+        margin-top: 15px;
+        svg{
+            color: $PRIMARY_YELLOW_2
+        }
+    }
+    .review{
+        margin-top: 15px;
+        color: $TITLE_ACTIVE
+    }
+}

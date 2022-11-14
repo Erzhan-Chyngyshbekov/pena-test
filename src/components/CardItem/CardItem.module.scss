@@ -1,0 +1,99 @@
+@import "../../styles/common/colors";
+$ARROW_SIZE: 20px;
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    padding: 30px;
+    position: relative;
+    background-color: white;
+    border-radius: 0;
+    &--empty{
+        background: $PRIMARY_GRAY;
+    }
+    &--yellow{
+        background: $PRIMARY_YELLOW;
+
+    }
+    &--gray{
+        background: $PRIMARY_GRAY;
+    }
+    &--long{
+        height: 600px;
+    }
+    .title{
+        max-width: 280px;
+        font-size: 28px;
+        font-weight: 700;
+        @media screen and (max-width: 900px) {
+            font-size: 20px;
+        }
+    }
+    .divider{
+        height: 5px;
+        width: 40px;
+        margin: 20px 0;
+        background: $PRIMARY_GRAY_4;
+        &--empty{
+            display: none;
+        }
+    }
+
+    .description{
+        color: $TITLE_ACTIVE;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &--yellow{
+            color: $PRIMARY_GRAY_4;
+        }
+
+    }
+    
+    .button{
+        height: 46px;
+        width: 200px;
+        margin-top: auto;
+        font-weight: 700;
+        border-radius: 0;
+        box-shadow: none;
+        background: $PRIMARY_GRAY_4;
+        &--long{
+            color: $PRIMARY_GRAY_4;
+            background: $PRIMARY_YELLOW;
+        }
+    }
+
+    .arrow{
+        display: none;
+        height: $ARROW_SIZE;
+        width: $ARROW_SIZE;
+        position: absolute;
+        z-index: 1;
+        background: white;
+        transform: rotate(45deg);
+        &--top{
+            display: block;
+            right: calc(50% - 10px);
+            top: -10px;
+        }
+        &--left{
+            display: block;
+            left: -10px;
+            top: calc(50% - 10px);
+        }
+        &--right{
+            display: block;
+            right: -10px;
+            top: calc(50% - 10px); 
+        }
+        &--bottom{
+            display: block;
+            right: calc(50% - 10px);
+            bottom: -10px;
+        }
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+}
