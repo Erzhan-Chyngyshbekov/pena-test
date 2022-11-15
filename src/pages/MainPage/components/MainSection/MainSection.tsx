@@ -1,16 +1,18 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+import { makeStyles } from "@mui/styles";
 
+import { AppColors } from "../../../../styles/common";
 import { AppHeader } from "../../../../components/AppHeader";
 import { CardButtonItem } from "../../../../components/CardButtonItem";
 import { CardCarouselItem } from "../../../../components/CardCarouselItem";
 import { CardItem } from "../../../../components/CardItem";
 import { Container } from "../../../../components/Container";
 
-import styles from "./MainSection.module.scss";
-
 export const MainSection = () => {
+  const styles = useStyles();
+
   return (
     <section className={styles.main}>
       <AppHeader />
@@ -38,3 +40,25 @@ export const MainSection = () => {
     </section>
   );
 };
+
+const useStyles = makeStyles({
+  main: {
+    width: "100%",
+    minHeight: "900px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    background: `linear-gradient(to right, ${AppColors.PRIMARY_GRAY} calc(100% / 2 + 300px), ${AppColors.PRIMARY_GRAY_2} calc(100% / 2 - 300px))`,
+    "@media screen and (max-width: 1200px)": {
+      background: `linear-gradient(to right, ${AppColors.PRIMARY_GRAY} 75%, ${AppColors.PRIMARY_GRAY_2} 25%)`,
+    },
+    "@media screen and (max-width: 900px)": {
+      background: `linear-gradient(to right, ${AppColors.PRIMARY_GRAY} 50%, ${AppColors.PRIMARY_GRAY_2} 50%)`,
+    },
+  },
+  empty: {
+    "@media screen and (max-width: 900px)": {
+      display: "none",
+    },
+  },
+});

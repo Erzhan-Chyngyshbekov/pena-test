@@ -2,9 +2,11 @@ import * as React from "react";
 import cn from "classnames";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import { makeStyles } from "@mui/styles";
 
+import { AppColors } from "../../styles/common";
 import "./CardNewsItem.scss";
-import styles from "./CardNewsItem.module.scss";
+// import styles from "./CardNewsItem.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -20,6 +22,8 @@ interface Props {
 }
 
 export const CardNewsItem: React.FC<Props> = ({ list }) => {
+  const styles = useStyles();
+
   return (
     <Swiper
       modules={[Pagination]}
@@ -40,3 +44,15 @@ export const CardNewsItem: React.FC<Props> = ({ list }) => {
     </Swiper>
   );
 };
+
+const useStyles = makeStyles({
+  wrapper: {
+    height: "300px",
+    padding: "30px",
+    background: AppColors.PRIMARY_BLUE,
+  },
+  title: { fontSize: "28px", fontWeight: 700, color: "white" },
+  date: { marginTop: "40px", color: AppColors.TITLE_ACTIVE_2 },
+  description: { fontSize: "18px", marginTop: "5px", color: "white" },
+  count: { marginTop: "30px", color: AppColors.TITLE_ACTIVE_2 },
+});
