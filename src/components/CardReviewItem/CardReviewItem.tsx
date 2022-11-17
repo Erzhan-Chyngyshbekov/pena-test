@@ -5,10 +5,10 @@ import { Pagination } from "swiper";
 import Rating from "@mui/material/Rating";
 import { makeStyles } from "@mui/styles";
 
+import { AppColors } from "../../styles/common";
 import "./CardReviewItem.scss";
 import "swiper/css";
 import "swiper/css/pagination";
-import { AppColors } from "../../styles/common";
 
 type CardReview = {
   author: string;
@@ -67,10 +67,10 @@ const useStyles = makeStyles({
   },
   "wrapper--yellow": { background: "#FCF3D3" },
   avatar: {
-    width: "$AVATAR_SIZE",
-    height: "$AVATAR_SIZE",
-    background: "$PRIMARY_GRAY",
-    color: "$PRIMARY_GRAY_4",
+    width: "60px",
+    height: "60px",
+    background: AppColors.PRIMARY_GRAY,
+    color: AppColors.PRIMARY_GRAY_4,
   },
   author: { marginTop: "15px", fontWeight: "bold" },
   rating: { marginTop: "15px", svg: { color: AppColors.PRIMARY_YELLOW_2 } },
