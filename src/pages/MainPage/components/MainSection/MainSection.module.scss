@@ -1,0 +1,19 @@
+.main{
+    width: 100%;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to right, #d7d7d7 calc(100% / 2 + 300px), #282828 calc(100% / 2 - 300px));
+    @media screen and (max-width: 1200px) {
+        background: linear-gradient(to right, #d7d7d7 75%, #282828 25%);
+    }
+    @media screen and (max-width: 900px) {
+        background: linear-gradient(to right, #d7d7d7 50%, #282828 50%);
+    }
+    .empty{
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+}

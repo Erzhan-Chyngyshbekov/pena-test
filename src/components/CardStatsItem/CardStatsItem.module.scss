@@ -1,0 +1,33 @@
+@import "../../styles/common/colors";
+$ICON_WRAPPER_SIZE: 80px;
+$ICON_SIZE: 34px;
+
+.wrapper{
+    height: 300px;
+    padding: 30px;
+    color: $PRIMARY_GRAY_5;
+    background: white;
+    &--empty{
+        background: $PRIMARY_GRAY;
+    }
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $ICON_WRAPPER_SIZE;
+        height: $ICON_WRAPPER_SIZE;
+        background: $PRIMARY_YELLOW;
+        svg{
+            width: $ICON_SIZE;
+            height: $ICON_SIZE;
+            color: $PRIMARY_BLUE
+        }
+    }
+    .count{
+        margin-top: 20px;
+        font-size: 36px;
+    }
+    .title{
+        margin-top: 5px;
+    }
+}

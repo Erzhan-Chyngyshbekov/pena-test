@@ -1,0 +1,20 @@
+@import "../../styles/common/colors";
+
+.wrapper{
+    height: 300px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    .label{
+        color: white;
+    }
+    .input{
+        color: white;
+        padding: 5px 0;
+        border-bottom: 1px solid white;
+    }
+    .icon{
+        color: white;
+    }
+}

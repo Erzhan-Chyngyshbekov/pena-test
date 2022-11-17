@@ -2,18 +2,16 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import PictureAsPdfOutlinedIcon from "@mui/icons-material/PictureAsPdfOutlined";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
-import { makeStyles } from "@mui/styles";
 
-import { AppColors } from "../../../../styles/common";
 import { CardButtonItem } from "../../../../components/CardButtonItem";
 import { CardItem } from "../../../../components/CardItem";
 import { CardReviewItem } from "../../../../components/CardReviewItem";
 import { CardSearchItem } from "../../../../components/CardSearchItem";
 import { Container } from "../../../../components/Container";
 
-export const ReviewsSection = () => {
-  const styles = useStyles();
+import styles from "./ReviewsSection.module.scss";
 
+export const ReviewsSection = () => {
   return (
     <>
       <section className={styles.section}>
@@ -65,13 +63,3 @@ export const ReviewsSection = () => {
     </>
   );
 };
-
-const useStyles = makeStyles({
-  section: {
-    width: "100%",
-    background: `linear-gradient(to right, transparent 50%, ${AppColors.PRIMARY_GRAY_2} 50%)`,
-    "@media screen and (max-width: 900px)": {
-      background: `${AppColors.PRIMARY_GRAY_2}`,
-    },
-  },
-});

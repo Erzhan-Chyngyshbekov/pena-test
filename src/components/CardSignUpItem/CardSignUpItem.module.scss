@@ -1,0 +1,39 @@
+@import "../../styles/common/colors";
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    padding: 30px;
+    background: $PRIMARY_BLUE;
+    color: white;
+    .title{
+        font-size: 28px;
+        @media screen and (max-width: 900px) {
+            font-size: 20px;
+        }
+    }
+    .divider{
+        height: 5px;
+        width: 40px;
+        margin: 20px 0;
+        background: white;
+    }
+    .input{
+        display: flex;
+        justify-content: center;
+        height: 48px;
+        margin-top: 30px;
+        background: white;
+        fieldset{
+            color: $PRIMARY_BLUE;
+            border: 0;
+            border-radius: 0;
+        }
+    }
+    .button{
+        margin-left: auto;
+        margin-top: auto;
+        color: white;
+    }
+}

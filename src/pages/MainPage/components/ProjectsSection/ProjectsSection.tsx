@@ -1,7 +1,6 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
-import { makeStyles } from "@mui/styles";
 
 import { Container } from "../../../../components/Container";
 import { CardButtonItem } from "../../../../components/CardButtonItem";
@@ -9,9 +8,9 @@ import { CardCarouselItem } from "../../../../components/CardCarouselItem";
 import { CardItem } from "../../../../components/CardItem";
 import { CardSignUpItem } from "../../../../components/CardSignUpItem";
 
-export const ProjectsSection = () => {
-  const styles = useStyles();
+import styles from "./ProjectsSection.module.scss";
 
+export const ProjectsSection = () => {
   return (
     <Container>
       <Grid container spacing={0}>
@@ -49,19 +48,3 @@ export const ProjectsSection = () => {
     </Container>
   );
 };
-
-const useStyles = makeStyles({
-  empty: {
-    height: "300px",
-    "&:nth-child(2)": {
-      "@media screen and (max-width: 900px)": {
-        display: "none",
-      },
-    },
-    "&:nth-child(3)": {
-      "@media screen and (max-width: 900px)": {
-        display: "none",
-      },
-    },
-  },
-});
